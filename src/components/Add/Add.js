@@ -3,8 +3,11 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Add = ({ addNewMovie }) => {
+  const navigate = useNavigate();
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [rating, setRating] = useState(0);
@@ -56,6 +59,7 @@ const Add = ({ addNewMovie }) => {
             onClick={() => {
               addNewMovie({ title, description, rating, posterUrl: imgsrc });
               handleClose();
+              navigate("/");
             }}
           >
             Save Changes
