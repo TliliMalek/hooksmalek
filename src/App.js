@@ -12,7 +12,7 @@ function App() {
   const addNewMovie = (newMovie) => {
     setnewList([...newList, newMovie]);
   };
-
+  ///test
   // filter section:
   const [esem, setName] = useState("");
   const thez = (value) => {
