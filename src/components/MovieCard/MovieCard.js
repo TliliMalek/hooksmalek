@@ -17,6 +17,7 @@ const Moviecard = ({ el }) => {
                   <p className="year">2018</p>
                   <p className="genre">Action | Adventure </p>
                   <p className="time">2h 28m</p>
+                  <p></p>
                 </div>
                 <p className="disc">{el.description}</p>
                 <div className="social-btn">
@@ -47,9 +48,7 @@ const Moviecard = ({ el }) => {
                 <img src={el.posterUrl} alt="" />
               </div>
               <div className="play_btn">
-                
-                  <i className="fas fa-play-circle" />
-                
+                <i className="fas fa-play-circle" />
               </div>
             </div>
           </div>
