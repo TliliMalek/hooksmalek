@@ -6,6 +6,7 @@ import { dataMovies } from "./data";
 import Filter from "./components/Filter/Filter";
 import { Navigate, Routes, Route } from "react-router-dom";
 import { Accueil } from "./Accueil";
+import { Description } from "./components/Description";
 
 function App() {
   // add movie section:
@@ -19,6 +20,10 @@ function App() {
       <Routes>
         <Route path="/Add" element={<Add addNewMovie={addNewMovie} />} />
         <Route path="/" element={<Accueil newList={newList} />} />
+        <Route
+          path="/description/:idmovie"
+          element={<Description newList={newList} />}
+        />
       </Routes>
     </div>
   );

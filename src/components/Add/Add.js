@@ -57,7 +57,13 @@ const Add = ({ addNewMovie }) => {
           <Button
             variant="primary"
             onClick={() => {
-              addNewMovie({ title, description, rating, posterUrl: imgsrc });
+              addNewMovie({
+                title,
+                description,
+                rating,
+                posterUrl: imgsrc,
+                id: Math.random(),
+              });
               handleClose();
               navigate("/");
             }}

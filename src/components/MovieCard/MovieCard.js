@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Rating } from "react-simple-star-rating";
 
 import "./styles.css";
@@ -22,13 +23,11 @@ const Moviecard = ({ el }) => {
                 <p className="disc">{el.description}</p>
                 <div className="social-btn">
                   {/* WATCH TRAILER*/}
-                  <button
-                    onClick={() => {
-                      window.open(el.trailerSrc, "_blank");
-                    }}
-                  >
-                    <i className="fas fa-play" /> SEE TRAILER
-                  </button>
+                  <Link to={`/description/${el.id}`}>
+                    <button>
+                      <i className="fas fa-play" /> SEE Details
+                    </button>
+                  </Link>
                   {/* GET*/}
 
                   {/*USERS RATINGS*/}
